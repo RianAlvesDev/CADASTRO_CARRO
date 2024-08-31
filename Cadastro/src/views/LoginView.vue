@@ -5,7 +5,10 @@
     const email = ref('');
     const password = ref('');
 
-    const user = reactive({})
+    const user = reactive({
+        email:'',
+        password:''
+    });
 
     onMounted(() => {
         console.log('componente criado');
@@ -20,6 +23,8 @@
 <template>
 
    {{ user.email }}
+
+   <template v-if="user.email.length < 0">Email vazio</template>
 
     <form action="" v-on:submit.prevent="login" >   
         <input type="text" placeholder="Email" v-model="user.email">
