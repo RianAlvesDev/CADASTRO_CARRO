@@ -5,11 +5,8 @@ import Menu from '@/components/Menu.vue';
 
 <template>
   <header>
-
-    <Menu />
-
     <div class="wrapper">
-      
+      <Menu />
     </div>
   </header>
 
